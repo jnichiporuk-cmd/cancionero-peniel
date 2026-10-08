@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<script>
+/* ============================================================================
+   Link viejo: jnichiporuk-cmd.github.io/cancionero-peniel
+   ============================================================================
+   - Es lo único que publica el repositorio público "cancionero-peniel"; el
+     código de la app está en el privado "cancionero-peniel-codigo".
+   - Salta al sitio oficial conservando lo que traía el link (?grupo=,
+     ?invitacion=, ?cancion=...). Va primero para saltar antes de dibujar.
+   - Se publica también como 404.html, así cualquier dirección vieja salta. */
+location.replace("https://cancionero-peniel.firebaseapp.com/" + location.search + location.hash);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E1116">
+<title>Cancionero Peniel</title>
+<!-- Las mismas etiquetas que la app: quien la instaló desde este link
+     conserva el ícono y el nombre. manifest.json, sw.js y los íconos se
+     publican idénticos a los del repositorio de la app. -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cancionero">
+<style>
+  body { margin: 0; padding: 0 16px; min-height: 100vh; display: grid; place-items: center;
+         background: #0E1116; color: #e6e6e6; font: 18px system-ui, sans-serif; text-align: center; }
+  a { color: #00B0F0; }
+</style>
+<!-- Sólo se ve si el navegador no corre JavaScript -->
+<p>El Cancionero se mudó.<br><a id="ir" href="https://cancionero-peniel.firebaseapp.com/">Abrir el Cancionero</a></p>
+<script>document.getElementById("ir").href = "https://cancionero-peniel.firebaseapp.com/" + location.search + location.hash;</script>
